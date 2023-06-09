@@ -24,7 +24,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning the application code...'
-                git branch: 'main', url: 'https://github.com/cvamsikrishna11/Jenkins-CI-CD-Pipeline-Project.git'
+                git branch: 'main', url: 'https://github.com/litocs25/Jenkins-project-2.git'
                 sh 'mvn --version'
                 
             }
@@ -79,7 +79,7 @@ pipeline {
             sh """
             mvn sonar:sonar \
           -Dsonar.projectKey=JavaWebApp \
-          -Dsonar.host.url=http://172.31.89.106:9000 \
+          -Dsonar.host.url=http://172.31.29.247:9000 \
           -Dsonar.login=eb71cc32022d0478b157b601133934c966fd8a04
             
             """
